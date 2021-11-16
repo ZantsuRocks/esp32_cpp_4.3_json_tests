@@ -35,3 +35,7 @@ void CppTest::setMerda(int value) {
 void CppTest::runThread() {
     this->task = new thread(testTask);
 }
+
+void CppTest::setKeyString(string key, string value) {
+    this->jsonData[key] = value;
+}

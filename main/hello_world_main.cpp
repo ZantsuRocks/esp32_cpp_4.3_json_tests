@@ -19,8 +19,6 @@ void app_main();
 }
 
 void app_main() {
-    printf("Hello world!\n");
-
     /* Print chip information */
     esp_chip_info_t chip_info;
     esp_chip_info(&chip_info);
@@ -52,6 +50,7 @@ void app_main() {
 
     CppTest *test2 = new CppTest(); //Esse gera Leak de memoria se não descontruir (delete)
     test2->setMerda(90);
+    test2->setKeyString("testKey", "testVal");
     test2->printHelloWorld();
 
     delete test2;
